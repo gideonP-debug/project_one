@@ -8,35 +8,22 @@
     <link rel="stylesheet" href="" />
 
     <script>
+
+//Get student's name from the list and show resuls
     function student_info()
     {
+      //Capture student's name
       var std_name = document.getElementById("student_name");
       var strUser = std_name.options[std_name.selectedIndex].text;
 
-    /*  var reader = new FileReader();
+    //append the student's name with hi/her file before displaying it
+    document.getElementById("content").innerHTML = "<iframe id='std_info' src = '"+strUser+".txt' rows='10' cols='40'></iframe>";
+    //document.getElementById("std_info").value = strUser;
+//    document.write("<iframe id='std_info' src = '"+strUser+".txt' rows='10' cols='25'></iframe>");
+    alert(document.getElementById('std_info').contentDocument.body.firstChild.innerHTML);
 
-      reader.onload = function(){
-      document.getElementById('std_info').textContent=reader.result;
-      }
-      reader.readAsText("Gideon Kime.txt");*/
 
-    document.getElementById("std_info").value = strUser;
     }
-
-
-    function On_Selected_File(event) {
-      var selectedFile = event.target.files[0];
-      var reader = new FileReader();
-
-      var result = document.getElementById("result");
-
-      reader.onload = function(event) {
-        result.innerHTML = event.target.result;
-      };
-
-      reader.readAsText(selectedFile);
-    }
-
     </script>
 
   </head>
@@ -72,15 +59,10 @@
           <button onclick="student_info()">Search!</button>
       </p>
 
-    <p id="content">
-      Student's Name:<input type="textarea" id="std_info" rows="10" cols="25"><br><br>
-    </p>
+    <div id="content">
+    <!--  Student's Name:<iframe id="std_info" src = 'Gideon Kime.txt' rows="10" cols="25"></iframe><br><br>-->
+  </div>
 <!--</div>-->
-<p>
-  <input type="file" onchange="On_Selected_File(event)">
 
-  <textarea id="result" rows="15" cols="60"></textarea>
-
-</p>
   </body>
 </html>
