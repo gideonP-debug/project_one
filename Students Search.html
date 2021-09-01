@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title> Students' Search </title>
+
+    <link rel="stylesheet" href="" />
+
+    <script>
+    function student_info()
+    {
+      var std_name = document.getElementById("student_name");
+      var strUser = std_name.options[std_name.selectedIndex].text;
+
+    /*  var reader = new FileReader();
+
+      reader.onload = function(){
+      document.getElementById('std_info').textContent=reader.result;
+      }
+      reader.readAsText("Gideon Kime.txt");*/
+
+    document.getElementById("std_info").value = strUser;
+    }
+
+
+    function On_Selected_File(event) {
+      var selectedFile = event.target.files[0];
+      var reader = new FileReader();
+
+      var result = document.getElementById("result");
+
+      reader.onload = function(event) {
+        result.innerHTML = event.target.result;
+      };
+
+      reader.readAsText(selectedFile);
+    }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+        <h1>Students' coursework look-up</h1>
+        <p><b>Created by Gideon Kime</b></p>
+        <p><b>Grand View University</b></p>
+      </header>
+    <label>Please select student's name from the list :</label>
+
+
+<select name="name" id="student_name">
+  <option value="craig">Craig Shaffer</option>
+  <option value="dahn">Dahn Tran</option>
+  <option value="david">David Beehler</option>
+  <option value="evan">Evan Callaghan</option>
+  <option value="gideon">Gideon kime</option>
+  <option value="grant">Grant Gonnerman</option>
+  <option value="jack">Jackson Nguyen</option>
+  <option value="JB">Jacob Hillaker</option>
+  <option value="JT">Jacob Thomas</option>
+  <option value="josue">Josue Chigwira</option>
+  <option value="maddy">Madeline Edmonds</option>
+  <option value="morgan">Morgan Gant</option>
+  <option value="nick">Nick Jones</option>
+</select>
+
+
+      <p>
+          <button onclick="student_info()">Search!</button>
+      </p>
+
+    <p id="content">
+      Student's Name:<input type="textarea" id="std_info" rows="10" cols="25"><br><br>
+    </p>
+<!--</div>-->
+<p>
+  <input type="file" onchange="On_Selected_File(event)">
+
+  <textarea id="result" rows="15" cols="60"></textarea>
+
+</p>
+  </body>
+</html>

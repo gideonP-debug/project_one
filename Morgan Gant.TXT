@@ -1,0 +1,6 @@
+My goal statement is:
+
+I want to gain a basic understanding of what Sofware development in, how software's differ from each other and when to use 
+a certain software and be able to compare it to Data Science. 
+I learned this summer that as a Data Scientist it's important to know a little about each role on your team so this 
+class will help me in the future when teamwork is needed! 
