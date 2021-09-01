@@ -1,0 +1,4 @@
+Process							Time taken
+Design Website						45min
+JavaScript coding					3hrs 30min
+Code debugging						2hrs 30min
