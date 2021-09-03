@@ -1,3 +1,5 @@
+Name: Jacob Hillaker
+
 Goal Statement:
 
 In this class, I would like to become more confident with the software development process. 
