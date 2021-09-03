@@ -17,7 +17,7 @@
       var strUser = std_name.options[std_name.selectedIndex].text;
 
     //append the student's name with hi/her file before displaying it
-    document.getElementById("content").innerHTML = "<iframe id='std_info' src = '"+strUser+".txt' rows='20' cols='70'></iframe>";
+    document.getElementById("content").innerHTML = "<iframe id='std_info' src = '"+strUser+".txt' width='700' height='400'></iframe>";
     //document.getElementById("std_info").value = strUser;
 //    document.write("<iframe id='std_info' src = '"+strUser+".txt' rows='10' cols='25'></iframe>");
     alert(document.getElementById('std_info').contentDocument.body.firstChild.innerHTML);
